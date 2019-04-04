@@ -9,9 +9,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-
 from app.api.config.config import config_by_name
-#from app.api.routers.routers import blueprint
+
 
 def page_not_found(e):
 	error = jsonify({
@@ -20,9 +19,10 @@ def page_not_found(e):
 	})
 	return error, 404
 
-def create_app(config_name) :
+def run(config_name) :
 	app = Flask(__name__)
+	app.register_error_handler(404, page_not_found)
 	app.config.from_object(config_by_name[config_name])
 	db.init_app(app)
-	app.register_error_handler(404, page_not_found)
+	app.app_context().push()
 	return app

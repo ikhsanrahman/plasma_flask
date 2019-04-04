@@ -63,7 +63,7 @@ class UserSchema(Schema):
     @validates('password')
     def validate_name(self, password):
         # only allow alphabet character and space
-        pattern = r"^[a-zA-Z ]+$"
+        pattern = r"."
         if len(password) < 2:
             raise ValidationError('Invalid username')
         if len(password) > 40:

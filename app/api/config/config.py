@@ -16,11 +16,14 @@ class Config:
   
     DATABASE = {
         "DRIVER"   : os.getenv('DB_DRIVER')     or "postgresql", # sqlite // postgresql // mysql
-        "USERNAME" : os.getenv('DB_USERNAME')   or "plasma",
-        "PASSWORD" : os.getenv('DB_PASSWORD')   or "plasma",
+        "USERNAME" : os.getenv('DB_USERNAME')   or "krisfi",
+        "PASSWORD" : os.getenv('DB_PASSWORD')   or "krisfi",
         "HOST_NAME": os.getenv('DB_HOSTNAME')   or "localhost",
-        "DB_NAME"  : os.getenv('DB_NAME')       or "plasma_lab",
+        "DB_NAME"  : os.getenv('DB_NAME')       or "db_krisfi",
     }
+
+    VIDEO_FOLDER = 'data_video'
+    PAPER_FOLDER = 'data_paper'
 
     def time() :
         utc         = arrow.utcnow()
@@ -34,10 +37,12 @@ class DevelopmentConfig(Config):
     """ This is class for development configuration """
     DEBUG = True
     DATABASE = Config.DATABASE
+    VIDEO_FOLDER = Config.VIDEO_FOLDER
+    PAPER_FOLDER = Config.PAPER_FOLDER
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL") or \
             DATABASE["DRIVER"] + "://" + DATABASE["USERNAME"] + ":" + \
             DATABASE["PASSWORD"] + "@" + DATABASE["HOST_NAME"] + "/" + \
-            DATABASE["DB_NAME"] 
+            DATABASE["DB_NAME"] + "_dev"
     print(SQLALCHEMY_DATABASE_URI)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -48,6 +53,9 @@ class TestingConfig(Config):
     """ This is class for testing configuration """
     DEBUG = True
     TESTING = True
+
+    VIDEO_FOLDER = Config.VIDEO_FOLDER
+    PAPER_FOLDER = Config.PAPER_FOLDER
 
     DATABASE = Config.DATABASE
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL") or \
@@ -63,6 +71,9 @@ class TestingConfig(Config):
 class ProductionConfig(Config):
     """ This is class for production configuration """
     DEBUG = False
+
+    VIDEO_FOLDER = Config.VIDEO_FOLDER
+    PAPER_FOLDER = Config.PAPER_FOLDER
 
     DATABASE = Config.DATABASE
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL") or \

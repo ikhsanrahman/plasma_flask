@@ -1,0 +1,294 @@
+
+
+/* 1. CSS Imports
+--------------------------------------- */
+@import url('http://fonts.googleapis.com/css?family=Open Sans:300,400,700');
+@import url(font-awesome.min.css);
+@import url(bootstrap.min.css);
+
+/* 2. General Styles
+--------------------------------------- */
+* { font-family: 'Open Sans', sans-serif; }
+body { background-color: rgb(235,235,235);
+    width: auto;
+}
+h1 { font-size: 24px; }
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+.logo { display: inline-block; 
+    color: white;    
+}
+.logo h1 {
+    font-size: 24px;
+    margin: 10px 15px;
+}
+.logo h1 span{
+    color: red;
+}
+
+.templatemo-footer {
+    /* clear: both; */
+    font-size: 13px;
+    padding: 8px 0 5px 0;
+    text-align: center;
+    color: #ccc;
+    /* margin-top: 0px; */
+    background-color: rgb(27, 27, 31);
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    display: flex;
+    /* text-align: right; */
+}
+
+.header{
+    /* margin: 0; */
+    /* float: right; */
+    margin-left: auto;
+    /* width: 300px; */
+    position: relative;
+    right: 50px;
+    bottom: 5px;
+    /* background-color: red; */
+}
+
+.home-collection{
+    display: flex;
+    /* background-color: red; */
+    height: auto;
+    /* background-color: red; */
+}
+
+.home-page{
+    /* background-color: blue; */
+    position: relative;
+    top: 20px;
+    right: 50px;
+
+}
+
+.collection-page{
+    /* color: blue; */
+    position: relative;
+    top: 20px;
+    right: 30px;
+}
+
+
+/* button class logout */
+.dropbtn {
+    background-color: rgb(100, 228, 100);
+    color: white;
+    /* padding: 16px; */
+    font-size: 16px;
+    margin-top: -10px;
+    border: 20px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    left: 85%;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #c90e0e;
+    height: 60px;
+    /* border: 1px solid green;
+    border-radius: 20px; */
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1;
+            
+}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+
+
+/* 3. Sidebar
+------------------------------------------------------*/
+
+
+
+.navbar-header { color: rgb(127,127,127); }
+.templatemo-sidebar {
+    padding: 0;
+    /* background-color: rgb(0, 60, 128); */
+    /* height: 200px; */
+    margin-top: 0;
+}
+.templatemo-sidebar-menu {
+    list-style: none;
+
+    margin: 1px;
+    padding: 0;
+    border: 1px solid green;
+    border-radius: 30px ;
+    height: 545px;
+    width: 200px;
+    background-color: rgb(37, 216, 216);
+}
+.templatemo-sidebar-menu > li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+}
+.templatemo-sidebar-menu > li > a {
+    display: block;
+    position: relative;
+    margin: 0;
+    border: 0px;
+    padding: 20px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;    
+}
+.templatemo-sidebar-menu a { color: black; }
+.templatemo-sidebar-menu a:hover { text-decoration: none; }
+.templatemo-sidebar-menu li.sub .templatemo-submenu { display: none; }
+.templatemo-sidebar-menu li.sub.open .templatemo-submenu { display: block; }
+.templatemo-submenu { padding-left: 0; }
+.templatemo-submenu li {
+    list-style: none;
+    background-color: #DFDFDF;
+}
+.templatemo-submenu li a {
+    display: block;
+    padding: 20px 15px;
+    margin: 0;
+}
+.templatemo-sidebar-menu > li.sub.open > a {
+    background-color: rgba(145,145,145,0.3);
+}
+.templatemo-sidebar .templatemo-sidebar-menu >li.active, .templatemo-sidebar .templatemo-sidebar-menu>li>a:hover {
+    background-color: rgb(191, 232, 167);
+    border-radius: 30px;
+}
+.templatemo-submenu li > a:hover {
+    background-color: rgb(228,228,228);
+}
+.templatemo-sidebar .templatemo-sidebar-menu > li > a > i {
+    font-size: 16px;
+    top: 2px;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 4px;
+    display: inline-block;
+    width: 1.25em;
+    text-align: center;
+}
+.modal-content{
+    border: 1px solid black;
+    border-radius: 40px;
+}
+
+/* 6. Sign in Form 
+--------------------------------------------*/
+.templatemo-signin-form {
+    padding-top: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+/* 10. Media Queries
+------------------------------------------------------*/
+@media screen and (max-width: 992px) {
+    body{
+        /* background-color: red; */
+        width: auto;
+    }
+
+    .header{
+        width: auto;
+        position: relative;
+        left: 20px;
+        right: 0;
+        /* margin-left: auto; */
+
+        /* background-color: red; */
+    }
+
+    .navbar{
+        width: 100%;
+       
+        margin: auto;
+        padding: auto;
+        display: flex;
+    }
+
+
+
+    .templatemo-footer {
+        /* width: auto; */
+        /* height: 50x; */
+        position: absolute;
+        /* top: auto; */
+        width: 100%;
+        bottom: 0;
+        /* margin-right: -100%; */
+    }
+}
+/* @media screen and (max-width: 991px) {
+    .navbar-form {
+        padding: 0;
+        margin-left: 0;
+    }
+    .navbar-header { float: none; }
+    .navbar-toggle { display: block; }
+    .templatemo-sidebar {
+        border-top: 0 !important;
+        margin: 20px;
+    }
+    .templatemo-sidebar.navbar-collapse.collapse {
+        display: none !important;
+    }
+    .templatemo-sidebar.navbar-collapse.in {
+        border-top: 0 !important;
+        margin: 20px;
+        position: relative;
+        overflow: hidden !important;
+        overflow-y: auto !important;
+        display: block !important;
+    }
+    .templatemo-content-wrapper { float: none; }
+    .templatemo-content { margin: 0; }
+} */
